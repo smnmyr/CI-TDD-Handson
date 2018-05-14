@@ -42,7 +42,7 @@ public class ForumPost {
 	
 	public static ForumPost unMarshall(JSONObject postsObject) throws ParseException {
 		String author = postsObject.getString("author");
-		String message = "oh, a bug";
+		String message = postsObject.getString("message");
 		String pubDateString = postsObject.optString("pubdate");
 		
 		DateTime dateTime;
